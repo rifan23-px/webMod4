@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kamar</title>
+    <script>
+        function validasiForm() {
+            const namaKamar = document.getElementById("namaKamar").value;
+            const fasilitas = document.getElementById("fasilitas").value;
+            if (namaKamar.trim() === "") {
+                alert("Nama kamar harus diisi");
+                return false;
+            }
+            if (fasilitas.trim() === "") {
+                alert("Fasilitas harus diisi");
+                return false;
+            }
+            alert("Data Kamar berhasil ditambahkan");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Tambah Data Kamar</h2>
+    <form onsubmit="return validasiForm();">
+        <label for="namaKamar">Nama Kamar:</label>
+        <input type="text" id="namaKamar" name="namaKamar" required><br><br>
+
+        <label for="fasilitas">Fasilitas:</label>
+        <input type="text" id="fasilitas" name="fasilitas" required><br><br>
+
+        <button type="submit">Tambah Data</button>
+    </form>
+</body>
+</html>
